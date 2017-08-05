@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+enum LeagueType {
+    case mens
+    case womens
+    case coed
+}
+
+
+struct Player {
+    var desiredLeague: String?
+    var selectedSkillLevel: String?
+}
