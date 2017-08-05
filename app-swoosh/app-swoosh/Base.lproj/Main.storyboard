@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8lZ-a5-Ihg"/>
                         <viewControllerLayoutGuide type="bottom" id="Z9y-Ta-b6E"/>
@@ -93,19 +93,15 @@
                             <constraint firstItem="Sfo-7e-KIX" firstAttribute="top" secondItem="jWH-YP-LAw" secondAttribute="bottom" constant="85" id="ykF-qx-L4c"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="Iw6-eb-QrW" id="gF1-yp-IPH"/>
-                        <outlet property="swoosh" destination="jWH-YP-LAw" id="RC1-Y5-Ai7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="IuI-1J-5Ub">
             <objects>
-                <viewController id="1pS-Ch-5Q3" sceneMemberID="viewController">
+                <viewController id="1pS-Ch-5Q3" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Pd-IY-9u3"/>
                         <viewControllerLayoutGuide type="bottom" id="gW4-Ig-Nbs"/>
@@ -186,6 +182,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="1pS-Ch-5Q3" eventType="touchUpInside" id="YTP-dq-Qgj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhV-zr-Vzw">
                                 <rect key="frame" x="16" y="30" width="44" height="33"/>
@@ -218,16 +217,19 @@
                             <constraint firstItem="eRc-Pl-Gi3" firstAttribute="top" secondItem="9Pd-IY-9u3" secondAttribute="bottom" constant="20" id="yBh-Ym-jCT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="3LL-eT-agP" kind="show" identifier="skillVCSegue" id="UGz-sl-TEM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c89-fB-m62" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tRo-yo-nWj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="951.20000000000005" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="UhC-We-ZpL">
             <objects>
-                <viewController id="3LL-eT-agP" sceneMemberID="viewController">
+                <viewController id="3LL-eT-agP" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BKz-e7-3rD"/>
                         <viewControllerLayoutGuide type="bottom" id="ifg-hX-YaS"/>
@@ -319,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dO-iw-tgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677.5999999999999" y="147.97601199400302"/>
+            <point key="canvasLocation" x="1762" y="137"/>
         </scene>
     </scenes>
     <resources>
